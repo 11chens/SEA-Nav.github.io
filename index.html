@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" 
+        content="SEA-Nav: Learning Quadruped Navigation in Cluttered Environments in One Hour">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <!-- <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/overview.pdf" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+<!-- 
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Reinforcement Learning, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SEA-Nav: Learning Quadruped Navigation in Cluttered Environments in One Hour</title>
+  <!-- <link rel="icon" href="./static/images/robot.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./static/images/robot.png" type="image/x-icon"> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/icon.png"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Shiyi Chen, Zeyu Wan, Shiyang Yan, Chun Zhang, Weiyi Zhang, 
+    Qiang Li, Debing Zhang, Fasih Ud Din Farrukh -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SEA-Nav: Learning Quadruped Navigation in Cluttered Environments in One Hour</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">Anonymous Author(s)</span>
+            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Affiliation</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                    <!-- PDF link -->
+                      <span class="link-block">
+                        <a href="./paper/CORL_final.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/11chens/SLR-master" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2406.04835" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser"               
+                controls
+                muted
+                preload
+                playsinline height="100%">
+      <source src="./static/videos/spotlight.mp4"
+                type="video/mp4">
+      </video>
+      <div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+          <div class="content has-text-justified">
+            <strong>Without</strong> relying on any <strong>privileged</strong> or <strong>visual</strong> information, we can train a <strong>robust</strong> locomotion policy. In real-world deployment, the quadruped robot is capable of traversing various challenging terrains.
+          </div>
+        </h2>
+      </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Efficiently training quadruped robots for navigation in cluttered environments remains a major challenge. Prior methods either guarantee safety and agility only in simple layouts or suffer from poor scalability and excessive training time in complex scenarios. We propose SEA-Nav (Safe, Efficient, and Agile Navigation), a reinforcement learning framework for quadruped navigation that achieves strong real-world performance with minimal training cost. Our method combines a reward structure that encourages safe exploration, a goal-dwell termination mechanism that reinforces successful task completion, and action constraints that softly regulate velocity outputs for safety. With only one hour of training on a single RTX 4090 GPU, SEA-Nav enables zero-shot deployment to previously unseen static and dynamic obstacle settings. Extensive simulation and real-world experiments show that SEA-Nav achieves superior navigation success and agile locomotion across diverse environments.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+    <!-- Pipeline -->
+    <div class="columns is-centered has-text-centered">
+      <h3 class="title is-4">Framework Overview</h3>
+    </div>
+    <div class="content has-text-centered">
+      <img width="60%" src="./static/images/new_net.png">
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <div style="max-width: 700px; margin: 0 auto;">
+            The SLR training framework leverages the Markov Decision Process, guiding the latent's self-learning based on state transitions (transition model), state distinctions (random sampling), and cumulative rewards (critic), without relying on manually set privileged information constraints. 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h3 class="title is-4">Ascend and descend mountain</h3>
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <video id="ours-body" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/up_mountain.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="ours-body-leg" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/down_mountain.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h3 class="title is-4">Climb long stairs smoothly</h3>
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/nature_up_staris.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h3 class="title is-4">Apply anti-disturbance to the robot</h3>
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <video id="ours-body" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/disturb_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="ours-body-leg" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/disturb_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="mpc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/kickdog.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h3 class="title is-4">Navigate over challenging rocks</h3>
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <video id="ours-body" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rock.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="content">
+          <video id="ours-body-leg" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rock2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h3 class="title is-4">Tunnel through vegetation</h3>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/veg.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div> <!-- 这里添加了关闭标签 -->
+  </div>
+</section>
+
+
+<!-- End image carousel -->
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @inproceedings{
+          chen2024slr,
+          title={{SLR}: Learning Quadruped Locomotion without Privileged Information},
+          author={Shiyi Chen and Zeyu Wan and Shiyang Yan and Chun Zhang and Weiyi Zhang and Qiang Li and Debing Zhang and Fasih Ud Din Farrukh},
+          booktitle={8th Annual Conference on Robot Learning},
+          year={2024},
+          url={https://openreview.net/forum?id=RMkdcKK7jq}
+          }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
