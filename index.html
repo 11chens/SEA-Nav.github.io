@@ -128,25 +128,18 @@
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser"               
-                controls
-                muted
-                preload
-                playsinline height="100%">
-      <source src="./static/videos/corl_2025_video.mp4"
-                type="video/mp4">
-      </video>
-      <div>
-        <br>
-        <h2 class="subtitle has-text-centered">
-          <div class="content has-text-justified">
-            <strong>Without</strong> relying on any <strong>privileged</strong> or <strong>visual</strong> information, we can train a <strong>robust</strong> locomotion policy. In real-world deployment, the quadruped robot is capable of traversing various challenging terrains.
-          </div>
-        </h2>
-      </div>
+  <div class="container is-max-desktop has-text-centered">
+    <video id="teaser" 
+           controls
+           muted
+           preload
+           playsinline 
+           style="max-width: 100%; height: auto;"  <!-- 保持响应式 -->
+    >
+      <source src="./static/videos/corl_2025_video.mp4" type="video/mp4">
+    </video>
   </div>
+  
 </section>
 <!-- End teaser video -->
 
@@ -172,13 +165,13 @@
       <h3 class="title is-4">Framework Overview</h3>
     </div>
     <div class="content has-text-centered">
-      <img width="60%" src="./static/images/framework.png">
+      <img width="50%" src="./static/images/framework.png">
     </div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <div style="max-width: 700px; margin: 0 auto;">
-            The SLR training framework leverages the Markov Decision Process, guiding the latent's self-learning based on state transitions (transition model), state distinctions (random sampling), and cumulative rewards (critic), without relying on manually set privileged information constraints. 
+            We present SEA-Nav, a reinforcement learning framework that enables safe, efficient, and agile quadruped navigation in cluttered environments. By integrating reward shaping for safe exploration, a goal-dwell termination strategy to enhance sample efficiency, and action constraints to promote stable locomotion, SEA-Nav can be trained within one hour on a single GPU and deployed zero-shot to unseen scenarios. 
           </div>
         </div>
       </div>
@@ -194,63 +187,21 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h3 class="title is-4">Ascend and descend mountain</h3>
+    <h3 class="title is-4">Experiment: Cluttered Room</h3>
     <div class="columns is-centered">
 
       <div class="column">
         <div class="content">
-          <video id="ours-body" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/up_mountain.mp4" type="video/mp4">
+          <video id="abs" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/clutter/abs.mp4" type="video/mp4">
           </video>
         </div>
       </div>
 
       <div class="column">
         <div class="content">
-          <video id="ours-body-leg" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/down_mountain.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <h3 class="title is-4">Climb long stairs smoothly</h3>
-    <div class="columns is-centered">
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/nature_up_staris.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <h3 class="title is-4">Apply anti-disturbance to the robot</h3>
-    <div class="columns is-centered">
-
-      <div class="column">
-        <div class="content">
-          <video id="ours-body" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/disturb_1.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="content">
-          <video id="ours-body-leg" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/disturb_2.mp4" type="video/mp4">
+          <video id="fast" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/clutter/fast.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -258,7 +209,56 @@
       <div class="column">
         <div class="content">
           <video id="mpc" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/kickdog.mp4" type="video/mp4">
+            <source src="./static/videos/clutter/mpc.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="slow" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/clutter/slow.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h3 class="title is-4">Experiment: Dynamic Obstacle</h3>
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <video id="abs" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dynamic/abs.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="fast" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dynamic/fast.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="mpc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dynamic/mpc.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="slow" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dynamic/slow.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -267,47 +267,86 @@
 </section>
 
 
-
-
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h3 class="title is-4">Navigate over challenging rocks</h3>
+    <h3 class="title is-4">Experiment: Obstacle Course</h3>
     <div class="columns is-centered">
-      <!-- Visual Effects. -->
+
       <div class="column">
         <div class="content">
-          <video id="ours-body" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/rock.mp4" type="video/mp4">
+          <video id="abs" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/course/abs.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      
+
       <div class="column">
         <div class="content">
-          <video id="ours-body-leg" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/rock2.mp4" type="video/mp4">
+          <video id="fast" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/course/fast.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="mpc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/course/mpc.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="slow" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/course/slow.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
-    <h3 class="title is-4">Tunnel through vegetation</h3>
+
+    <h3 class="title is-4">Experiment: S Blend Track</h3>
     <div class="columns is-centered">
+
       <div class="column">
         <div class="content">
-          <video id="dollyzoom1" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/veg.mp4" type="video/mp4">
+          <video id="abs" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/s_blend/abs.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-    </div> <!-- 这里添加了关闭标签 -->
+
+      <div class="column">
+        <div class="content">
+          <video id="fast" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/s_blend/fast.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="mpc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/s_blend/mpc.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="slow" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/s_blend/slow.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
   </div>
 </section>
 
@@ -333,7 +372,7 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
@@ -347,7 +386,7 @@
           }
       </code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
@@ -356,11 +395,9 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
             Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.
           </p>
-
         </div>
       </div>
     </div>
